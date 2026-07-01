@@ -1,0 +1,51 @@
+id,tier,request,meal_occasion,mission_type,budget_sensitivity,dietary_constraints,preference_constraints,excluded_items,product_categories,risk_flags,label_rationale
+e01,easy,"Milk, bread and eggs please",none,household_stock_up,not_mentioned,,,,dairy_eggs|bakery,,
+e02,easy,I need cereal and coffee for breakfast,breakfast,specific_ingredient,not_mentioned,,,,breakfast,,
+e03,easy,"I want to buy bananas, apples and oranges",none,specific_ingredient,not_mentioned,,,,produce,,
+e04,easy,Chicken breast and rice,none,specific_ingredient,not_mentioned,,,,meat_seafood|pantry_staples,,
+e05,easy,Get me some yogurt,none,specific_ingredient,not_mentioned,,,,dairy_eggs,,
+e06,easy,Pasta and tomato sauce for dinner,dinner,specific_ingredient,not_mentioned,,,,pantry_staples,,
+e07,easy,Two bottles of red wine,none,specific_ingredient,not_mentioned,,,,alcohol,,
+e08,easy,Dish soap and laundry detergent,none,household_stock_up,not_mentioned,,,,household_nonfood,,
+e09,easy,I need diapers and baby formula,none,specific_ingredient,not_mentioned,,,,baby,,
+e10,easy,Some cheese and crackers,snack,specific_ingredient,not_mentioned,,,,dairy_eggs|snacks_sweets,,
+e11,easy,Orange juice and toast for breakfast,breakfast,specific_ingredient,not_mentioned,,,,beverages|bakery,,
+e12,easy,A bag of frozen peas,none,specific_ingredient,not_mentioned,,,,frozen,,
+e13,easy,Ground beef for burgers,none,specific_ingredient,not_mentioned,,,,meat_seafood,,
+e14,easy,Olive oil and salt,none,household_stock_up,not_mentioned,,,,pantry_staples,,
+e15,easy,Chocolate bars and chips,snack,specific_ingredient,not_mentioned,,indulgent,,snacks_sweets,,
+e16,easy,"Sparkling water, six bottles",none,specific_ingredient,not_mentioned,,,,beverages,,
+m01,medium,Something quick and easy for dinner tonight,dinner,convenience_meal,not_mentioned,,quick,,ready_meals|frozen,,
+m02,medium,Healthy lunch options for the office,lunch,health_goal,not_mentioned,,healthy,,produce|ready_meals,,
+m03,medium,"I'm hosting friends this weekend, need party food",none,party_hosting,not_mentioned,,,,snacks_sweets|alcohol|beverages,,
+m04,medium,Snacks the kids will like for after school,snack,kids_meal,not_mentioned,,kid_friendly,,snacks_sweets|dairy_eggs,,
+m05,medium,"I want to eat healthier, what should I get",none,health_goal,not_mentioned,,healthy,,produce|health_diet,missing_information,Goal is clear but no concrete items specified -> missing_information.
+m06,medium,"Cheap filling meals for the week, I'm on a tight budget",none,household_stock_up,low_budget,,filling,,pantry_staples|frozen|meat_seafood,,"'cheap'/'tight budget' -> budget field, not a preference token."
+m07,medium,Vegetarian dinner ideas,dinner,convenience_meal,not_mentioned,vegetarian,,,produce|ready_meals,,
+m08,medium,Need a quick high-protein breakfast,breakfast,health_goal,not_mentioned,,quick|high_protein,,dairy_eggs|breakfast,,
+m09,medium,Gluten-free bread and pasta,none,specific_ingredient,not_mentioned,gluten_free,,,bakery|pantry_staples,,
+m10,medium,Premium ingredients for a special date-night dinner,dinner,party_hosting,premium,,indulgent,,meat_seafood|alcohol,,"party_hosting defined as 'cooking for an occasion/guests', incl. special meals."
+m11,medium,Quick snacks I can eat at my desk,snack,convenience_meal,not_mentioned,,quick|easy_to_carry|no_cooking,,snacks_sweets,,
+m12,medium,Ingredients for a kids birthday party,none,party_hosting,not_mentioned,,kid_friendly,,snacks_sweets|bakery|beverages,,
+m13,medium,"Low-sugar options, trying to cut back",none,health_goal,not_mentioned,,low_sugar,,produce|health_diet,,
+m14,medium,Vegan protein sources,none,health_goal,not_mentioned,vegan,high_protein,,health_diet|pantry_staples,,
+m15,medium,Easy no-cook lunch,lunch,convenience_meal,not_mentioned,,no_cooking|quick,,ready_meals,,
+m16,medium,Halal chicken for dinner,dinner,specific_ingredient,not_mentioned,halal,,,meat_seafood,,
+m17,medium,Ingredients for a green salad,none,specific_ingredient,not_mentioned,,healthy|light,,produce,,
+m18,medium,Stock up on basics for the month,none,household_stock_up,not_mentioned,,,,pantry_staples|household_nonfood,missing_information,'basics' is underspecified -> missing_information.
+h01,hard,"Snacks for the kids, but one of them is allergic to nuts",snack,kids_meal,not_mentioned,nut_allergy,kid_friendly,,snacks_sweets|dairy_eggs,allergy_or_safety,Explicit allergy: keyword baseline may also catch 'allergic'/'nuts' -> useful contrast.
+h02,hard,"Breakfast but not eggs, I can't stand them",breakfast,convenience_meal,not_mentioned,,,eggs,breakfast|bakery,negation_present,"Negation as preference, NOT an allergy -> excluded_items, no allergy flag."
+h03,hard,Something healthy but I still want it to feel indulgent,none,health_goal,not_mentioned,,healthy|indulgent,,produce|snacks_sweets,conflicting_goals,healthy vs indulgent within one request.
+h04,hard,"Quick dinner, nothing with dairy though",dinner,convenience_meal,not_mentioned,lactose_free,quick,dairy,ready_meals,negation_present,Negation maps to a hard constraint (lactose_free) AND excluded_items.
+h05,hard,Birthday cake but my daughter is celiac,none,party_hosting,not_mentioned,gluten_free,,,bakery,allergy_or_safety,"Implicit: 'celiac' -> gluten_free, word 'gluten' never appears (keyword baseline fails)."
+h06,hard,I want to lose weight but my husband wants comfort food,none,health_goal,not_mentioned,,low_calorie|indulgent,,produce|ready_meals,conflicting_goals,Two-person conflicting goals in one request.
+h07,hard,Dinner my vegetarian sister and my meat-loving dad will both eat,dinner,party_hosting,not_mentioned,vegetarian,,,produce|pantry_staples,conflicting_goals,Must satisfy the stricter constraint (vegetarian) despite the mention of meat.
+h08,hard,"Just need something, I don't know, for later",none,unclear,not_mentioned,,,,,ambiguous_request|missing_information,No content for a keyword baseline to grab.
+h09,hard,Protein but no meat and no soy,none,health_goal,not_mentioned,vegetarian,high_protein,meat|soy,dairy_eggs|health_diet,negation_present,Double negation; 'no meat' implies vegetarian.
+h10,hard,"Party drinks but nothing alcoholic, kids will be there",none,party_hosting,not_mentioned,,kid_friendly,alcohol,beverages,negation_present,Negation must REMOVE the 'alcohol' aisle a keyword system would add.
+h11,hard,"I'm diabetic, need a breakfast that won't spike my sugar",breakfast,health_goal,not_mentioned,,low_sugar,,breakfast|dairy_eggs,allergy_or_safety,Implicit: 'diabetic' -> low_sugar; treated as safety-relevant.
+h12,hard,Cheap but good quality wine for a dinner party,none,party_hosting,low_budget,,,,alcohol,conflicting_goals,cheap vs premium/quality tension on the budget axis.
+h13,hard,Lactose-free milk and also some cheese for the kids,none,kids_meal,not_mentioned,lactose_free,,,dairy_eggs,ambiguous_request,Scope of the constraint is unclear: does lactose-free extend to the cheese?
+h14,hard,"Something filling but light, you know what I mean",none,unclear,not_mentioned,,filling|light,,,conflicting_goals|ambiguous_request,filling vs light tension plus vague phrasing.
+h15,hard,"Vegan dinner, but my partner is allergic to nuts so be careful",dinner,convenience_meal,not_mentioned,vegan|nut_allergy,,,produce|health_diet,allergy_or_safety,"Two stacked constraints, one safety-critical."
+h16,hard,Get the usual,none,unclear,not_mentioned,,,,,ambiguous_request|missing_information,"Zero information; requires asking, not guessing."

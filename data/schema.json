@@ -1,0 +1,100 @@
+{
+  "meal_occasion": {
+    "type": "single",
+    "values": [
+      "breakfast",
+      "lunch",
+      "dinner",
+      "snack",
+      "none"
+    ]
+  },
+  "mission_type": {
+    "type": "single",
+    "note": "closed categorical axis; used for accuracy/F1",
+    "values": [
+      "convenience_meal",
+      "health_goal",
+      "party_hosting",
+      "kids_meal",
+      "household_stock_up",
+      "specific_ingredient",
+      "unclear"
+    ]
+  },
+  "dietary_constraints": {
+    "type": "list",
+    "note": "HARD / safety-critical only",
+    "values": [
+      "nut_allergy",
+      "lactose_free",
+      "gluten_free",
+      "vegetarian",
+      "vegan",
+      "halal"
+    ]
+  },
+  "preference_constraints": {
+    "type": "list",
+    "values": [
+      "quick",
+      "healthy",
+      "indulgent",
+      "filling",
+      "light",
+      "kid_friendly",
+      "easy_to_carry",
+      "no_cooking",
+      "high_protein",
+      "low_sugar",
+      "low_calorie"
+    ]
+  },
+  "budget_sensitivity": {
+    "type": "single",
+    "values": [
+      "low_budget",
+      "medium",
+      "premium",
+      "not_mentioned"
+    ]
+  },
+  "excluded_items": {
+    "type": "list",
+    "note": "free strings: the actual negated items"
+  },
+  "product_categories": {
+    "type": "list",
+    "values": [
+      "produce",
+      "meat_seafood",
+      "dairy_eggs",
+      "bakery",
+      "pantry_staples",
+      "breakfast",
+      "snacks_sweets",
+      "frozen",
+      "ready_meals",
+      "beverages",
+      "alcohol",
+      "health_diet",
+      "baby",
+      "household_nonfood"
+    ]
+  },
+  "risk_flags": {
+    "type": "list",
+    "values": [
+      "allergy_or_safety",
+      "negation_present",
+      "conflicting_goals",
+      "ambiguous_request",
+      "missing_information"
+    ]
+  },
+  "_model_outputs_not_scored_as_labels": [
+    "mission_summary (free-text, one line: the app's open-ended articulation of the specific mission)",
+    "confidence (0-1 float)",
+    "explanation (string)"
+  ]
+}

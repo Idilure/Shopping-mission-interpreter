@@ -1,0 +1,104 @@
+{
+  "produce": [
+    "Fresh Fruit",
+    "Fresh Vegetables",
+    "Salads Herbs & Prepared Produce"
+  ],
+  "meat_seafood": [
+    "Fresh Beef & Pork",
+    "Fresh Poultry",
+    "Fresh Fish & Seafood",
+    "Charcuterie & Deli Meat"
+  ],
+  "dairy_eggs": [
+    "Dairy Milk & Cream",
+    "Cheese",
+    "Yogurt & Desserts",
+    "Butter Margarine & Eggs"
+  ],
+  "bakery": [
+    "Bakery Bread",
+    "Bakery Pastry & Cakes",
+    "Fresh Pasta & Dough"
+  ],
+  "pantry_staples": [
+    "Pasta Rice & Legumes",
+    "Canned & Jarred Food",
+    "Oils Vinegar & Condiments",
+    "Sauces & Dressings",
+    "Flour Sugar & Baking",
+    "Soups Broths & Instant Meals"
+  ],
+  "breakfast": [
+    "Breakfast Cereals & Spreads",
+    "Coffee Cocoa & Infusions"
+  ],
+  "snacks_sweets": [
+    "Salty Snacks",
+    "Cookies Biscuits & Crackers",
+    "Chocolate Candy & Sweets",
+    "Nuts & Dried Fruit"
+  ],
+  "frozen": [
+    "Frozen Vegetables & Potatoes",
+    "Ice Cream & Frozen Desserts"
+  ],
+  "ready_meals": [
+    "Ready Meals & Prepared Food"
+  ],
+  "beverages": [
+    "Water",
+    "Soft Drinks",
+    "Juices & Smoothies",
+    "Energy Sports & Functional Drinks"
+  ],
+  "alcohol": [
+    "Wine Cava & Champagne",
+    "Beer",
+    "Spirits & Aperitifs"
+  ],
+  "health_diet": [
+    "Organic Bio & Dietetic",
+    "Plant-Based & Vegetarian",
+    "Meal Replacement & Sports Nutrition"
+  ],
+  "baby": [
+    "Baby Food & Formula",
+    "Baby Diapers & Care"
+  ],
+  "household_nonfood": [
+    "Air Fresheners & Insecticides",
+    "Automotive",
+    "Beauty Cosmetics & Fragrance",
+    "Clothing & Footwear",
+    "Condoms & Intimate Care",
+    "DIY Hardware & Garden",
+    "Dishwashing",
+    "Electronics & Small Appliances",
+    "Feminine Hygiene",
+    "Flowers Plants & Seasonal",
+    "General Products",
+    "Hair Care",
+    "Health Pharmacy & First Aid",
+    "Home Decor & Bedding",
+    "Home Kitchen & Tableware",
+    "Household Cleaning",
+    "Large Appliances & Household Tech",
+    "Laundry Care",
+    "Mobile Computing & Media",
+    "Office School & Books",
+    "Oral Care",
+    "Paper Tissues & Disposables",
+    "Pet Care & Accessories",
+    "Pet Food Cat",
+    "Pet Food Dog",
+    "Security Batteries & Light Bulbs",
+    "Shaving & Deodorant",
+    "Skin Body & Shower",
+    "Sun Care",
+    "Tobacco & Smoking Accessories",
+    "Toys Games & Leisure",
+    "Trash Bags & Storage",
+    "Travel Luggage & Accessories"
+  ]
+}

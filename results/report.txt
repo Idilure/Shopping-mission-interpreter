@@ -1,0 +1,80 @@
+========================================================================
+SHOPPING MISSION INTERPRETER — EVALUATION REPORT
+Examples: 50  |  Systems: ['keyword', 'llm']
+========================================================================
+
+────────────────────────────────────────────────────────────────────────
+  SYSTEM: KEYWORD
+────────────────────────────────────────────────────────────────────────
+  FIELD                              ALL          EASY        MEDIUM          HARD
+  ────────────────────────────────────────────────────────────────────────────────
+  meal_occasion             acc=0.94(50)  acc=0.88(16)  acc=1.00(18)  acc=0.94(16)
+  mission_type              acc=0.46(50)  acc=0.00(16)  acc=0.61(18)  acc=0.75(16)
+  budget_sensitivity        acc=1.00(50)  acc=1.00(16)  acc=1.00(18)  acc=1.00(16)
+
+  dietary_constraints         f1=0.86(50)    f1=0.00(16)    f1=1.00(18)    f1=0.77(16)
+  preference_constraints      f1=0.77(50)    f1=0.00(16)    f1=0.80(18)    f1=0.83(16)
+  product_categories          f1=0.51(50)    f1=0.95(16)    f1=0.20(18)    f1=0.29(16)
+  risk_flags                  f1=0.45(50)    f1=0.00(16)    f1=0.22(18)    f1=0.52(16)
+  excluded_items              f1=0.75(50)    f1=0.00(16)    f1=0.00(18)    f1=0.75(16)
+
+
+────────────────────────────────────────────────────────────────────────
+  SYSTEM: LLM
+────────────────────────────────────────────────────────────────────────
+  FIELD                              ALL          EASY        MEDIUM          HARD
+  ────────────────────────────────────────────────────────────────────────────────
+  meal_occasion             acc=0.96(50)  acc=0.94(16)  acc=1.00(18)  acc=0.94(16)
+  mission_type              acc=0.62(50)  acc=0.50(16)  acc=0.78(18)  acc=0.56(16)
+  budget_sensitivity        acc=1.00(50)  acc=1.00(16)  acc=1.00(18)  acc=1.00(16)
+
+  dietary_constraints         f1=0.96(50)    f1=0.00(16)    f1=1.00(18)    f1=0.93(16)
+  preference_constraints      f1=0.79(50)    f1=0.00(16)    f1=0.79(18)    f1=0.82(16)
+  product_categories          f1=0.62(50)    f1=0.98(16)    f1=0.41(18)    f1=0.50(16)
+  risk_flags                  f1=0.71(50)    f1=0.00(16)    f1=0.18(18)    f1=0.88(16)
+  excluded_items              f1=1.00(50)    f1=0.00(16)    f1=0.00(18)    f1=1.00(16)
+
+
+════════════════════════════════════════════════════════════════════════
+  KEYWORD vs LLM — SIDE BY SIDE (ALL TIERS)
+════════════════════════════════════════════════════════════════════════
+  FIELD                          KEYWORD         LLM     DELTA
+  ────────────────────────────────────────────────────────────
+  meal_occasion                   0.940       0.960  +0.020
+  mission_type                    0.460       0.620  +0.160
+  budget_sensitivity              1.000       1.000  +0.000
+
+  dietary_constraints             0.857       0.957  +0.100
+  preference_constraints          0.772       0.786  +0.014
+  product_categories              0.514       0.618  +0.104
+  risk_flags                      0.450       0.711  +0.261
+  excluded_items                  0.750       1.000  +0.250
+
+
+────────────────────────────────────────────────────────────────────────
+  FAILURE SUMMARY
+  Total failures (any field wrong): 49 keyword  |  37 LLM  (out of 50 examples each)
+
+  Hard-tier LLM failures (13):
+    [h01] Snacks for the kids, but one of them is allergic to nuts
+           failed: ['preference_constraints', 'product_categories']
+    [h02] Breakfast but not eggs, I can't stand them
+           failed: ['mission_type', 'product_categories']
+    [h03] Something healthy but I still want it to feel indulgent
+           failed: ['mission_type', 'product_categories']
+    [h04] Quick dinner, nothing with dairy though
+           failed: ['mission_type', 'product_categories']
+    [h06] I want to lose weight but my husband wants comfort food
+           failed: ['mission_type', 'preference_constraints', 'product_categories']
+    [h07] Dinner my vegetarian sister and my meat-loving dad will both
+           failed: ['mission_type', 'product_categories']
+    [h08] Just need something, I don't know, for later
+           failed: ['risk_flags']
+    [h09] Protein but no meat and no soy
+           failed: ['dietary_constraints', 'product_categories']
+    [h11] I'm diabetic, need a breakfast that won't spike my sugar
+           failed: ['product_categories']
+    [h12] Cheap but good quality wine for a dinner party
+           failed: ['meal_occasion', 'risk_flags']
+
+========================================================================

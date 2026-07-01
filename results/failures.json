@@ -1,0 +1,6579 @@
+[
+  {
+    "id": "e01",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Milk, bread and eggs please",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "bakery"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "bakery"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e01",
+    "tier": "easy",
+    "system": "llm",
+    "request": "Milk, bread and eggs please",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "bakery",
+        "pantry_staples"
+      ],
+      "risk_flags": [],
+      "mission_summary": "stocking up on milk, bread, and eggs",
+      "confidence": 0.9,
+      "explanation": "request for basic household items indicates stock up mission"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "bakery"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "e02",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "I need cereal and coffee for breakfast",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints"
+    ]
+  },
+  {
+    "id": "e02",
+    "tier": "easy",
+    "system": "llm",
+    "request": "I need cereal and coffee for breakfast",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast"
+      ],
+      "risk_flags": [],
+      "mission_summary": "stocking up on cereal and coffee for breakfast",
+      "confidence": 0.95,
+      "explanation": "'cereal and coffee for breakfast' clearly indicates the meal occasion and items needed"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e03",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "I want to buy bananas, apples and oranges",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "produce"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e04",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Chicken breast and rice",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood",
+        "pantry_staples"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood",
+        "pantry_staples"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e05",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Get me some yogurt",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e06",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Pasta and tomato sauce for dinner",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "pantry_staples"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "e06",
+    "tier": "easy",
+    "system": "llm",
+    "request": "Pasta and tomato sauce for dinner",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples"
+      ],
+      "risk_flags": [],
+      "mission_summary": "pasta and tomato sauce for dinner",
+      "confidence": 1.0,
+      "explanation": "request specifies pasta and tomato sauce for dinner"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e07",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Two bottles of red wine",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e07",
+    "tier": "easy",
+    "system": "llm",
+    "request": "Two bottles of red wine",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": [],
+      "mission_summary": "purchase of two bottles of red wine",
+      "confidence": 0.8,
+      "explanation": "the request is straightforward but lacks context for meal occasion or specific mission type"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e08",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Dish soap and laundry detergent",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "household_nonfood"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "household_nonfood"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e09",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "I need diapers and baby formula",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "baby"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "baby"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e09",
+    "tier": "easy",
+    "system": "llm",
+    "request": "I need diapers and baby formula",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "baby"
+      ],
+      "risk_flags": [],
+      "mission_summary": "stocking up on diapers and baby formula",
+      "confidence": 1.0,
+      "explanation": "request for diapers and baby formula indicates household stock up for a baby"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "baby"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e10",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Some cheese and crackers",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "snacks_sweets"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "snacks_sweets"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 0,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "meal_occasion",
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e10",
+    "tier": "easy",
+    "system": "llm",
+    "request": "Some cheese and crackers",
+    "pred": {
+      "meal_occasion": "snack",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "snacks_sweets"
+      ],
+      "risk_flags": [],
+      "mission_summary": "a simple snack of cheese and crackers",
+      "confidence": 0.95,
+      "explanation": "request for cheese and crackers indicates a snack mission"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "snacks_sweets"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e11",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Orange juice and toast for breakfast",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "bakery",
+        "beverages"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "beverages",
+        "bakery"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "e11",
+    "tier": "easy",
+    "system": "llm",
+    "request": "Orange juice and toast for breakfast",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "beverages",
+        "bakery"
+      ],
+      "risk_flags": [],
+      "mission_summary": "orange juice and toast for breakfast",
+      "confidence": 1.0,
+      "explanation": "specific request for orange juice and toast indicates a breakfast convenience meal"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "beverages",
+        "bakery"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e12",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "A bag of frozen peas",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "frozen"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "frozen"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e13",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Ground beef for burgers",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e14",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Olive oil and salt",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e14",
+    "tier": "easy",
+    "system": "llm",
+    "request": "Olive oil and salt",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples"
+      ],
+      "risk_flags": [],
+      "mission_summary": "specific request for olive oil and salt",
+      "confidence": 1.0,
+      "explanation": "request is clear for specific ingredients: olive oil and salt"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "e15",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Chocolate bars and chips",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "indulgent"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 0,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "meal_occasion",
+      "mission_type",
+      "preference_constraints"
+    ]
+  },
+  {
+    "id": "e15",
+    "tier": "easy",
+    "system": "llm",
+    "request": "Chocolate bars and chips",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": [],
+      "mission_summary": "request for chocolate bars and chips",
+      "confidence": 0.8,
+      "explanation": "the request is straightforward but lacks specific context or constraints"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "indulgent"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 0,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "meal_occasion",
+      "mission_type",
+      "preference_constraints"
+    ]
+  },
+  {
+    "id": "e16",
+    "tier": "easy",
+    "system": "keyword",
+    "request": "Sparkling water, six bottles",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "beverages"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "beverages"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type"
+    ]
+  },
+  {
+    "id": "m01",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Something quick and easy for dinner tonight",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "ready_meals",
+        "frozen"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m01",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Something quick and easy for dinner tonight",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "easy_to_carry"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "a quick and easy dinner option for tonight",
+      "confidence": 0.8,
+      "explanation": "the request for 'quick and easy' indicates a convenience meal, but lacks specific details on food preferences or categories"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "ready_meals",
+        "frozen"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m02",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Healthy lunch options for the office",
+    "pred": {
+      "meal_occasion": "lunch",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "lunch",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "ready_meals"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m02",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Healthy lunch options for the office",
+    "pred": {
+      "meal_occasion": "lunch",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "healthy lunch options for the office",
+      "confidence": 0.8,
+      "explanation": "the request is vague about specific items or categories for lunch options"
+    },
+    "gold": {
+      "meal_occasion": "lunch",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "ready_meals"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m03",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "I'm hosting friends this weekend, need party food",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "alcohol",
+        "beverages"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m03",
+    "tier": "medium",
+    "system": "llm",
+    "request": "I'm hosting friends this weekend, need party food",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "party food for hosting friends this weekend",
+      "confidence": 0.7,
+      "explanation": "the request is vague about specific food types or dietary needs"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "alcohol",
+        "beverages"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m04",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Snacks the kids will like for after school",
+    "pred": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "dairy_eggs"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m04",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Snacks the kids will like for after school",
+    "pred": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": [],
+      "mission_summary": "after-school snacks that are appealing to kids",
+      "confidence": 0.95,
+      "explanation": "'snacks the kids will like' indicates a focus on kid-friendly options for after school"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "dairy_eggs"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m05",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "I want to eat healthier, what should I get",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request",
+        "missing_information"
+      ],
+      "mission_summary": "",
+      "confidence": 0.1,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "health_diet"
+      ],
+      "risk_flags": [
+        "missing_information"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m05",
+    "tier": "medium",
+    "system": "llm",
+    "request": "I want to eat healthier, what should I get",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "missing_information"
+      ],
+      "mission_summary": "seeking suggestions for healthier food options",
+      "confidence": 0.7,
+      "explanation": "the request is vague and lacks specific details on what to get"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "health_diet"
+      ],
+      "risk_flags": [
+        "missing_information"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m06",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Cheap filling meals for the week, I'm on a tight budget",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "low_budget",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "filling"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "filling"
+      ],
+      "budget_sensitivity": "low_budget",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples",
+        "frozen",
+        "meat_seafood"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m06",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Cheap filling meals for the week, I'm on a tight budget",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "low_budget",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "filling"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "affordable and filling meals for the week",
+      "confidence": 0.8,
+      "explanation": "'cheap' and 'tight budget' indicate low_budget; 'filling meals' suggests a need for substantial food"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "filling"
+      ],
+      "budget_sensitivity": "low_budget",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples",
+        "frozen",
+        "meat_seafood"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m07",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Vegetarian dinner ideas",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "ready_meals"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m07",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Vegetarian dinner ideas",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "ideas for a vegetarian dinner",
+      "confidence": 0.8,
+      "explanation": "'vegetarian' indicates dietary constraint, but 'ideas' is vague."
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "ready_meals"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m08",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Need a quick high-protein breakfast",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "high_protein"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "high_protein"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "breakfast"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m08",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Need a quick high-protein breakfast",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "high_protein"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast"
+      ],
+      "risk_flags": [],
+      "mission_summary": "a quick high-protein breakfast",
+      "confidence": 1.0,
+      "explanation": "'quick' and 'high-protein' specify the type of breakfast desired"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "high_protein"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs",
+        "breakfast"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m09",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Gluten-free bread and pasta",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "gluten_free"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "bakery",
+        "pantry_staples"
+      ],
+      "risk_flags": [
+        "negation_present",
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [
+        "gluten_free"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "bakery",
+        "pantry_staples"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m10",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Premium ingredients for a special date-night dinner",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "premium",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "indulgent"
+      ],
+      "budget_sensitivity": "premium",
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood",
+        "alcohol"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m10",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Premium ingredients for a special date-night dinner",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "premium",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "premium ingredients for a special date-night dinner",
+      "confidence": 0.8,
+      "explanation": "request for 'premium ingredients' suggests a focus on quality for a dinner occasion"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "indulgent"
+      ],
+      "budget_sensitivity": "premium",
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood",
+        "alcohol"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m11",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Quick snacks I can eat at my desk",
+    "pred": {
+      "meal_occasion": "snack",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "easy_to_carry"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "easy_to_carry",
+        "no_cooking"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m11",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Quick snacks I can eat at my desk",
+    "pred": {
+      "meal_occasion": "snack",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "easy_to_carry"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": [],
+      "mission_summary": "quick and portable snacks for desk eating",
+      "confidence": 0.8,
+      "explanation": "'quick snacks' and 'at my desk' suggest easy-to-carry options"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick",
+        "easy_to_carry",
+        "no_cooking"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints"
+    ]
+  },
+  {
+    "id": "m12",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Ingredients for a kids birthday party",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "bakery",
+        "beverages"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m12",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Ingredients for a kids birthday party",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "gathering ingredients for a kids birthday party",
+      "confidence": 0.7,
+      "explanation": "the request is vague about specific ingredients needed for the party"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "bakery",
+        "beverages"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m13",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Low-sugar options, trying to cut back",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_sugar"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_sugar"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "health_diet"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m13",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Low-sugar options, trying to cut back",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_sugar"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "looking for low-sugar options to reduce sugar intake",
+      "confidence": 0.8,
+      "explanation": "'low-sugar' indicates a health goal."
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_sugar"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "health_diet"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m14",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Vegan protein sources",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "vegan"
+      ],
+      "preference_constraints": [
+        "high_protein"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [
+        "vegan"
+      ],
+      "preference_constraints": [
+        "high_protein"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "health_diet",
+        "pantry_staples"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m15",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Easy no-cook lunch",
+    "pred": {
+      "meal_occasion": "lunch",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "no_cooking"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "lunch",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "no_cooking",
+        "quick"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "ready_meals"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "m15",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Easy no-cook lunch",
+    "pred": {
+      "meal_occasion": "lunch",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "easy_to_carry",
+        "no_cooking"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "an easy, no-cook lunch option",
+      "confidence": 0.8,
+      "explanation": "'easy no-cook' suggests convenience but lacks specific items or categories"
+    },
+    "gold": {
+      "meal_occasion": "lunch",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "no_cooking",
+        "quick"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "ready_meals"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m16",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Halal chicken for dinner",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "halal"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [
+        "halal"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m17",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Ingredients for a green salad",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "produce"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy",
+        "light"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints"
+    ]
+  },
+  {
+    "id": "m17",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Ingredients for a green salad",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "produce"
+      ],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "gathering ingredients for a green salad",
+      "confidence": 0.8,
+      "explanation": "the request is vague about specific ingredients needed for the salad"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "specific_ingredient",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy",
+        "light"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce"
+      ],
+      "risk_flags": []
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m18",
+    "tier": "medium",
+    "system": "keyword",
+    "request": "Stock up on basics for the month",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples",
+        "household_nonfood"
+      ],
+      "risk_flags": [
+        "missing_information"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "m18",
+    "tier": "medium",
+    "system": "llm",
+    "request": "Stock up on basics for the month",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples",
+        "produce",
+        "meat_seafood",
+        "dairy_eggs",
+        "bakery",
+        "frozen",
+        "snacks_sweets",
+        "ready_meals",
+        "beverages",
+        "household_nonfood"
+      ],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "stocking up on basic groceries for the month",
+      "confidence": 0.8,
+      "explanation": "'stock up on basics' suggests a variety of essential items, but lacks specifics."
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "pantry_staples",
+        "household_nonfood"
+      ],
+      "risk_flags": [
+        "missing_information"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 2,
+        "fp": 8,
+        "fn": 0,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h01",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Snacks for the kids, but one of them is allergic to nuts",
+    "pred": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "nut_allergy"
+      ],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "dietary_constraints": [
+        "nut_allergy"
+      ],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h01",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Snacks for the kids, but one of them is allergic to nuts",
+    "pred": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "nut_allergy"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "nut-free snacks for kids",
+      "confidence": 0.9,
+      "explanation": "'allergic to nuts' -> nut_allergy; 'snacks for the kids' -> kids_meal"
+    },
+    "gold": {
+      "meal_occasion": "snack",
+      "mission_type": "kids_meal",
+      "dietary_constraints": [
+        "nut_allergy"
+      ],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "snacks_sweets",
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h02",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Breakfast but not eggs, I can't stand them",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "excluded_items": [
+        "eggs"
+      ],
+      "product_categories": [
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [
+        "eggs"
+      ],
+      "product_categories": [
+        "breakfast",
+        "bakery"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h02",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Breakfast but not eggs, I can't stand them",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [
+        "eggs"
+      ],
+      "product_categories": [
+        "breakfast"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ],
+      "mission_summary": "breakfast options excluding eggs",
+      "confidence": 0.8,
+      "explanation": "'not eggs' indicates exclusion; breakfast is specified"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [
+        "eggs"
+      ],
+      "product_categories": [
+        "breakfast",
+        "bakery"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h03",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Something healthy but I still want it to feel indulgent",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy",
+        "indulgent"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy",
+        "indulgent"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "snacks_sweets"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h03",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Something healthy but I still want it to feel indulgent",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy",
+        "indulgent"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "conflicting_goals"
+      ],
+      "mission_summary": "a healthy yet indulgent food option",
+      "confidence": 0.7,
+      "explanation": "'healthy but indulgent' indicates conflicting goals"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy",
+        "indulgent"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "snacks_sweets"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h04",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Quick dinner, nothing with dairy though",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [
+        "lactose_free"
+      ],
+      "preference_constraints": [
+        "quick"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [
+        "dairy"
+      ],
+      "product_categories": [
+        "ready_meals"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      }
+    },
+    "failed_fields": [
+      "dietary_constraints",
+      "product_categories",
+      "risk_flags",
+      "excluded_items"
+    ]
+  },
+  {
+    "id": "h04",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Quick dinner, nothing with dairy though",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "lactose_free"
+      ],
+      "preference_constraints": [
+        "quick"
+      ],
+      "excluded_items": [
+        "dairy"
+      ],
+      "product_categories": [],
+      "risk_flags": [
+        "negation_present"
+      ],
+      "mission_summary": "a quick dinner that excludes dairy products",
+      "confidence": 0.85,
+      "explanation": "'nothing with dairy' indicates lactose_free and negates dairy products"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [
+        "lactose_free"
+      ],
+      "preference_constraints": [
+        "quick"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [
+        "dairy"
+      ],
+      "product_categories": [
+        "ready_meals"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h05",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Birthday cake but my daughter is celiac",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "bakery"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [
+        "gluten_free"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "bakery"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "dietary_constraints",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h06",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "I want to lose weight but my husband wants comfort food",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "indulgent",
+        "low_calorie"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_calorie",
+        "indulgent"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "ready_meals"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h06",
+    "tier": "hard",
+    "system": "llm",
+    "request": "I want to lose weight but my husband wants comfort food",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "healthy",
+        "indulgent"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "conflicting_goals"
+      ],
+      "mission_summary": "finding a balance between weight loss and comfort food for the husband",
+      "confidence": 0.7,
+      "explanation": "the request indicates conflicting goals of losing weight and wanting comfort food"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_calorie",
+        "indulgent"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "ready_meals"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h07",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Dinner my vegetarian sister and my meat-loving dad will both eat",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "meat_seafood"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "pantry_staples"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h07",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Dinner my vegetarian sister and my meat-loving dad will both eat",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "conflicting_goals"
+      ],
+      "mission_summary": "a dinner that satisfies both a vegetarian and a meat lover",
+      "confidence": 0.8,
+      "explanation": "'vegetarian sister' indicates dietary constraint; 'meat-loving dad' creates conflicting goals."
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "pantry_staples"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h08",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Just need something, I don't know, for later",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "negation_present",
+        "ambiguous_request",
+        "missing_information"
+      ],
+      "mission_summary": "",
+      "confidence": 0.1,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request",
+        "missing_information"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h08",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Just need something, I don't know, for later",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "an unspecified item for later use",
+      "confidence": 0.5,
+      "explanation": "the request is vague and lacks specific details"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request",
+        "missing_information"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h09",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Protein but no meat and no soy",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "high_protein"
+      ],
+      "excluded_items": [
+        "meat",
+        "soy"
+      ],
+      "product_categories": [
+        "meat_seafood"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [
+        "high_protein"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [
+        "meat",
+        "soy"
+      ],
+      "product_categories": [
+        "dairy_eggs",
+        "health_diet"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "dietary_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h09",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Protein but no meat and no soy",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "high_protein"
+      ],
+      "excluded_items": [
+        "meat",
+        "soy"
+      ],
+      "product_categories": [],
+      "risk_flags": [
+        "negation_present"
+      ],
+      "mission_summary": "high-protein options without meat or soy",
+      "confidence": 0.8,
+      "explanation": "'no meat and no soy' leads to exclusions and a focus on high-protein alternatives"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "health_goal",
+      "dietary_constraints": [
+        "vegetarian"
+      ],
+      "preference_constraints": [
+        "high_protein"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [
+        "meat",
+        "soy"
+      ],
+      "product_categories": [
+        "dairy_eggs",
+        "health_diet"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "dietary_constraints",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h10",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Party drinks but nothing alcoholic, kids will be there",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "beverages"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [
+        "alcohol"
+      ],
+      "product_categories": [
+        "beverages"
+      ],
+      "risk_flags": [
+        "negation_present"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      }
+    },
+    "failed_fields": [
+      "risk_flags",
+      "excluded_items"
+    ]
+  },
+  {
+    "id": "h11",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "I'm diabetic, need a breakfast that won't spike my sugar",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "convenience_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "quick"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_sugar"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast",
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints",
+      "product_categories",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h11",
+    "tier": "hard",
+    "system": "llm",
+    "request": "I'm diabetic, need a breakfast that won't spike my sugar",
+    "pred": {
+      "meal_occasion": "breakfast",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_sugar"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "a low-sugar breakfast suitable for a diabetic",
+      "confidence": 0.9,
+      "explanation": "'diabetic' -> low_sugar (preference) + allergy_or_safety"
+    },
+    "gold": {
+      "meal_occasion": "breakfast",
+      "mission_type": "health_goal",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "low_sugar"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "breakfast",
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h12",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Cheap but good quality wine for a dinner party",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "low_budget",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "low_budget",
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 0,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "meal_occasion",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h12",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Cheap but good quality wine for a dinner party",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "party_hosting",
+      "budget_sensitivity": "low_budget",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": [],
+      "mission_summary": "affordable yet quality wine for a dinner party",
+      "confidence": 0.8,
+      "explanation": "'cheap' indicates low_budget; 'dinner party' indicates party_hosting with alcohol"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "party_hosting",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "low_budget",
+      "excluded_items": [],
+      "product_categories": [
+        "alcohol"
+      ],
+      "risk_flags": [
+        "conflicting_goals"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 0,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "meal_occasion",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h13",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Lactose-free milk and also some cheese for the kids",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "kids_meal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "lactose_free"
+      ],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "negation_present",
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "kids_meal",
+      "dietary_constraints": [
+        "lactose_free"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "ambiguous_request"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "preference_constraints",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h13",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Lactose-free milk and also some cheese for the kids",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "household_stock_up",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "lactose_free"
+      ],
+      "preference_constraints": [
+        "kid_friendly"
+      ],
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs"
+      ],
+      "risk_flags": [],
+      "mission_summary": "lactose-free milk and cheese for kids",
+      "confidence": 0.95,
+      "explanation": "'lactose-free' indicates dietary constraint; 'for the kids' suggests kid-friendly preference"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "kids_meal",
+      "dietary_constraints": [
+        "lactose_free"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "dairy_eggs"
+      ],
+      "risk_flags": [
+        "ambiguous_request"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "exact": 0
+      },
+      "product_categories": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "preference_constraints",
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h14",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Something filling but light, you know what I mean",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "filling",
+        "light"
+      ],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "dietary_constraints": [],
+      "preference_constraints": [
+        "filling",
+        "light"
+      ],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "conflicting_goals",
+        "ambiguous_request"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "risk_flags"
+    ]
+  },
+  {
+    "id": "h15",
+    "tier": "hard",
+    "system": "keyword",
+    "request": "Vegan dinner, but my partner is allergic to nuts so be careful",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "nut_allergy",
+        "vegan"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "",
+      "confidence": 0.5,
+      "explanation": "keyword-rule baseline"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [
+        "vegan",
+        "nut_allergy"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "health_diet"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h15",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Vegan dinner, but my partner is allergic to nuts so be careful",
+    "pred": {
+      "meal_occasion": "dinner",
+      "mission_type": "health_goal",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [
+        "vegan",
+        "nut_allergy"
+      ],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "allergy_or_safety"
+      ],
+      "mission_summary": "a vegan dinner that avoids nuts for the partner's allergy",
+      "confidence": 0.9,
+      "explanation": "'vegan' indicates dietary constraints; 'allergic to nuts' indicates nut_allergy"
+    },
+    "gold": {
+      "meal_occasion": "dinner",
+      "mission_type": "convenience_meal",
+      "dietary_constraints": [
+        "vegan",
+        "nut_allergy"
+      ],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [
+        "produce",
+        "health_diet"
+      ],
+      "risk_flags": [
+        "allergy_or_safety"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 0,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "exact": 0
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "mission_type",
+      "product_categories"
+    ]
+  },
+  {
+    "id": "h16",
+    "tier": "hard",
+    "system": "llm",
+    "request": "Get the usual",
+    "pred": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "budget_sensitivity": "not_mentioned",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request"
+      ],
+      "mission_summary": "request is unclear and lacks specific details",
+      "confidence": 0.5,
+      "explanation": "'the usual' is vague and does not provide specific items or categories"
+    },
+    "gold": {
+      "meal_occasion": "none",
+      "mission_type": "unclear",
+      "dietary_constraints": [],
+      "preference_constraints": [],
+      "budget_sensitivity": "not_mentioned",
+      "excluded_items": [],
+      "product_categories": [],
+      "risk_flags": [
+        "ambiguous_request",
+        "missing_information"
+      ]
+    },
+    "scores": {
+      "meal_occasion": 1,
+      "mission_type": 1,
+      "budget_sensitivity": 1,
+      "dietary_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "preference_constraints": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "product_categories": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      },
+      "risk_flags": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "exact": 0
+      },
+      "excluded_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "exact": 1
+      }
+    },
+    "failed_fields": [
+      "risk_flags"
+    ]
+  }
+]
